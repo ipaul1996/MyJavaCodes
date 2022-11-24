@@ -1,0 +1,414 @@
+TypedQuery<Account> q = em.createQuery(jpql, Account.class);
+
+String jpql = "update Account set balance=balance+?1 where name=?2";
+
+Query q = em.createQuery(jpql);
+
+q.setParameter(1, 500);
+q.setParameter(2, "Rohit");
+
+List<Account> list = q.getResultList();
+Account acc = (Account) q.getSingleResult();
+
+String jpql = "update Account set balance=balance+:bal where name = :nam";
+
+Query q = em.createQuery(jpql);
+
+q.setParameter("bal", 500);
+q.setParameter("nam", 600);
+
+@NamedQuery(name = "account.getBalance", query = "from Account where balance < :bal");
+@NamedQuery(name = "account.getBalance", query = "from Account where balance < :bal");
+
+@GeneratedValue(strategy = GenerationType.AUTO)
+@GeneratedValue(strategy = GenerationType.AUTO)
+@GeneratedValue(strategy = GenerationType.AUTO)
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Generatedvalue(strategy = GenerationType.SEQUENCE)
+
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("account-unit");
+EntityManager em = emf.createEntityManager();
+
+em.getTransaction().begin();
+em.getTransaction().commit();
+
+@NamedQuery(name = "account.getBalance", query = "from Account where balance < :bal");
+
+Query q = em.createNamedQuery("account.getBalance");
+
+String nq = "select * from account";
+
+Query q = em.createNativeQuery(nq, Account.class);
+
+
+@NamedNativeQuery(name = "account.allAccount", query = "select * from account", resultClass = Account.class)
+
+Query q = em.createNamedQuery("account.allAccount");
+
+Granularity Mismatch ---> Has a relationship mismatch
+
+@Embeddable 
+@Embedded
+
+@Embeddable
+@Embedded
+
+@Embedded
+@AttributeOverrides({
+	@AttributeOverride(name = "state", column = @Column(name = "Home_State"))
+	@AttributeOverride(name = "city", column = @Column(name = "Home_City"))
+	@AttributeOverride(name = "pincode", column = @Column(name = "Home_Pincode"))
+
+})
+private Address homeAddr;
+
+
+@Embedded
+@AttributeOverrides({
+	@AttributeOverride(name = "state", column = @Column(name = "Office_State"))
+	@AttributeOverride(name = "city", column = @Column(name = "Office_City"))
+	@AttributeOvereride(name = "pincode", column = @Column(name = "Offie_Pincode")
+})
+private Address officeAddr;
+
+@ElementCollection
+@Embedded
+@JoinTable(name = "empAddress", joinColumns = @JoinColumn(name = "emp_id"))
+private List<Address> addresses = new ArrayList<>();
+
+@ElementCollection
+@JoinTable(name = "empaddress", joinColumns = @JoinColumn(name = "emp_id"))
+@JoinTable(name = "empAddress", joinColumns = @JoinColumn(name = "emp_id"))
+
+
+@NamedQuery(name = "account.getBalance", query = "from Account where balance < :bal")
+
+@ElementCollection
+@Embedded
+@JoinTable(name = "empAddress", joinColumns = @JoinColumn(name = "emp_id"))
+
+
+@NamedQuery(name = "account.getBalance", query = "from Account where balance < :bal")
+
+Query q = em.createNamedQuery("account.getBalance");
+
+q.setParameter("bal", 500);
+
+@Embedded
+@AttributeOverrides({
+	@AttributeOverride(name = "state", column = @Column(name = "Home_state"))
+	@AttributeOverride(name = "city", column = @Column(name = "Home_city"))
+	@AttributeOverride(name = "pincode", column = @Column(name = "Home_Pincode"))
+})
+private Address homeAddr;
+
+<property name = "hibernate.show_sql" value = "true"/>
+<property name = "hibernate.show_sql" value = "true"/>
+<property name = "hibernate.show_sql" value = "true"/>
+<property name = "hibernate.show_sql" value = "true"/>
+<property name = "hibernate.show_sql" value = "true"/>
+
+
+<property name = "hibernate.hbm2ddl.auto" value = "create"/>
+<property name = "hibernate.hbm2ddl.auto" value = "create"/>
+<property name = "hibernate.hbm2ddl.auto" value = "create"/>
+<property name = "hibernate.hbm2ddl.auto" value = "create"/>
+<property name = "hiberbate.hbm2ddl.auto" value = "create"/>
+
+@Table(name = "mystudents")
+@Table(name = "mystudents")
+@Table(name = "mystudents")
+
+@Column(name = "sname")
+@Column(name = "sname")
+@Column(name = "sname")
+
+@Transient
+@Transient
+@Transient
+
+@GeneratedValue(strategy = GenerationType.AUTO)
+@GeneratedValue(strategy = GenerationType.AUTO)
+@GeneratedValue(strategy = GenerationType.AUTO)
+
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@GeneratedValue(strategy = GenerationType.SEQUENCE)
+
+maven compiler source
+Java compiler maven plugin
+
+maven compiler source
+Java compiler maven plugin
+
+maven compiler source
+Java compiler maven plugin
+
+maven compiler source
+Java compiler maven plugin
+
+Hibernate core mvn
+Hibernate core mvn
+Hibernate core mvn
+Hibernate core mvn
+Hibernate core mvn
+
+mysql connector-mvn
+mysql connector-mvn
+mysql connector-mvn
+mysql connector-mvn
+mysql connector-mvn
+
+META-INF
+persistence.xml
+
+META-INF
+persistence.xml
+
+@ElementCollection
+@Embedded
+@JoinTable(name = "empaddresses", joinColumns = @JoinColumn(name = "emp_id"))
+
+@NamedNativeQuery(name = "account.allAccount", query = "select * from account", resultClass = "Account.class")
+
+
+@ElementCollection(fetch = FetchType.EAGER)
+@ElementCollection(fetch = FetchType.EAGER)
+@ElementCollection(fetch = FetchType.EAGER)
+@ElementCollection(fetch = FetchType.EAGER)
+@ElementCollection(fetch = FetchType.EAGER)
+
+@OneToMany
+private List<Employee> emps = new ArrayList<>();
+
+@OneToMany
+private List<Employee> emps = new ArrayList<>();
+
+@OneToMany
+private List<Employee> emps = new ArrayList();
+
+@OneToMany(cascade = CascadeType.ALL)
+
+@OneToMany(cascade = CascadeType.ALL)
+
+@OneToMany(cascade = CascadeType.ALL)
+
+@OneToMany(cascade = CascadeType.ALL)
+
+@ManyToOne(cascade = CascadeType.ALL)
+
+@ManyToOne(cascade = CascadeType.ALL)
+
+@JoinTable(name = "empaddress", joinColumns = @JoinColumn(name = "emp_id"))
+
+@ManyToMany(cascade = CascadeType.ALL)
+
+@ManyToMany(cascade = CascadeType.ALL)
+
+
+@AttributeOverrides({
+	@AttributeOverride(name = "state", column = @Column(name = "Home_State"))
+	@AttributeOverride(name = "city", column = @Column(name = "Home_City"))
+	@AttributeOverride(name = "pincode", column = @Column(name = "Home_Pincode"))
+
+})
+
+
+Employee emp = em.find(Employee.class, 1);
+
+
+@OneToMany(cascade = CascadeType.ALL)
+@JoinTable(name = "dept_emp", joinColumns = @JoinColumn(name = "did"), inverseJoinColumns = @JoinColumn(name = "eid"))
+private List<Employee> emps = new ArrayList<>();
+
+Department dept = new Department();
+
+Employee e1 = new Employee();
+Employee e2 = new Employee();
+
+
+dept.getemps().add(e1);
+dept.getemps().add(e2);
+
+
+em.persist(dept);
+
+department
+employee
+department_employee ---> dept_emp
+deaprtment_deptid ---> did
+emps_empId ---> eid
+
+
+
+@OneToMany(cascade = CascadeType.ALL)
+@JoinTable(name = "dept_emp", joinColumns = @JoinColumn(name = "did"), inverseJoinColumns = @JoinColumn(name = "eid"))
+private List<Employee> emps = new ArrayList<>();
+
+
+Department dept = new Department();
+
+Employee e1 = new Employee();
+Employee e2 = new Employee();
+
+dept.getemps().add(e1);
+dept.getemps().add(e2);
+
+
+
+
+
+@ManyToOne(cascade = CascadeType.ALL)
+@JoinColumn(name = "did")
+private Department dept;
+
+Department dept = new Department();
+
+Employee e1 = new Employee();
+e1.setDept(dept);
+
+Employee e2 = new Employee();
+e2.setDept(dept);
+
+em.persist(e1);
+em.persist(e2);
+
+Department
+Employee
+dept_deptId ---> did
+
+
+
+
+OneToMany(Bi-directional)
+=========================
+
+Inside Department,
+
+@OneToMany(cascade = CascadeType.ALL)
+@JoinTable(name = "dept_emp", joinColumns = @JoinColumn(name = "did"), inverseJoinColumns = @JoinColumn(name = "eid"))
+private List<Employee> emps = new ArrayList<>();
+
+
+Inside Employee,
+@ManyToOne(cascade = CascadeType.ALL)
+@JoinColumn(name = "did")
+private Department dept;
+
+Department dept = new Department();
+
+Employee e1 = new Employee();
+e1.setDept(e1);
+
+Employee e2 = new Employee();
+e2.setDept(e2);
+
+dept.getEmps().add(e1);
+dept.getEmps().add(e2);
+
+em.persist(dept);
+
+department
+employee
+department_deptId
+
+department_employee ---> dept_emp
+department_deptId ---> did
+emps_empId ---> eid
+
+To drop the linking table
+@OneToOne(mappedBy = "dept", cascade = CascadeType.ALL)
+
+
+
+
+
+
+ManyToMany
+==========
+
+Inside Department,
+
+@ManyToMany(cascade = CascadeType.ALL)
+private List<Employee> emps = new ArrayList<>();
+
+
+Inside Employee,
+
+@ManyToMany(cascade = CascadeType.ALL)
+private List<Department> dept = new ArrayList<>();
+
+
+Department d1 = new Department();
+
+Department d2 = new Department();
+
+Employee e1 = new Employee();
+
+Employee e2 = new Employee();
+
+
+d1.getEmps().add(e1);
+d2.getEmps().add(e2);
+
+e1.getDept().add(d1);
+e2.getDept().add(d2);
+
+em.persist(d1);
+em.persist(d2);
+
+@Inheritence(strategy = InheritenceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="emptype",discriminatorType=DiscriminatorType.STRING)
+@DiscriminatorValue(value="emp")
+
+@Inheritence(strategy=InheritenceType.JOINED) 
+@PrimaryKeyJoinColumn(name="PKid")
+
+
+
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+
+@Inheritence(strategy = InheritenceType.SINGLE_TABLE)
+@Inheritence(strategy = InheritenceType.SINGLE_TABLE)
+@Inheritence(strategy = InheritenceType.SINGLE_TABLE)
+
+
+@Inhritence(strategy = InheritenceType.JOINED)
+@PrimaryKeyJoinColumn(name = "PKid")
+
+@DiscriminatorColumn(name = "empType", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue(value = "emp")
+
+@DiscriminatorColumn(name = "emptype", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue(value = "emp")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
