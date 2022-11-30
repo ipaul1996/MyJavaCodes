@@ -5,9 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
+@NamedQuery(name = "account.getBalance", query = "from Account where balance < :bal")
+@NamedNativeQuery(name = "account.allAccount", query = "select * from myaccount",  resultClass = Account.class)
 @Table(name = "MyAccount")
 public class Account {
 	
