@@ -22,9 +22,10 @@ public class Demo1 {
 		try {
 			conn = DriverManager.getConnection(url, "root", "sql123"); 	//Establishing the connection with db
 			
+			
 			Statement st = conn.createStatement(); 	//Getting the statement object for executing SQL query
 			
-			int x = st.executeUpdate("insert into student1 values(1, 'IP', 25)"); 
+			int x = st.executeUpdate("insert into student1 values(3, 'IP', 25)"); 
 			/* This Method is for DML. If we run this program more than once we will get an exception java.sql.SQLIntegrityConstraintViolationException because id field in db has primary key as constraint. */
 			
 			if(x>0)
@@ -39,6 +40,7 @@ public class Demo1 {
 		} finally {
 			
 			try {
+			
 				conn.close(); //Closing the connection
 			} catch (SQLException e) {
 				e.printStackTrace();

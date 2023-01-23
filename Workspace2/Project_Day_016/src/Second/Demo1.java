@@ -17,7 +17,7 @@ public class Demo1 {
 			e.printStackTrace();
 		}
 		
-		String url = "jdbc:mysql://localhost:3306/Practise"; 
+		String url = "jdbc:mysq://localhost:3306/Practise"; 
 		
 	
 		
@@ -25,7 +25,7 @@ public class Demo1 {
 			
 			PreparedStatement ps = conn.prepareStatement("select * from student1");
 			ResultSet rs = ps.executeQuery();
-			
+		
 			while(rs.next()) {
 				
 				int i = rs.getInt("id");
@@ -42,7 +42,8 @@ public class Demo1 {
 			
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
-			System.out.println(e);
+//			System.out.println(e);
+			e.printStackTrace();
 			
 		} 
 		

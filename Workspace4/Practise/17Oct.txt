@@ -1,0 +1,76 @@
+TypedQuery<Account> q = em.createQuery(jpql, Account.class)
+Query q = em.creteQuery(jpql);
+
+String jpql = "update student set balance = balance + :bal where name = :nam";
+
+q.setParameter("bal", 5000);
+q.setParameter("nam", "Ram");
+
+@NamedQuery(name = "account.getBalance", query = "from Account where balance < :bal")
+
+@GeneratedValue(strategy = GenerationType.AUTO)
+
+String nq = "select * from account";
+
+Query q = em.createNativeQuery(nq, Account.class);
+
+@NamedNativeQuery(name = "account.allAccount", query = "select * from account", resultClass = "Account.class")
+
+@Embeddable
+@Embedded
+
+@Embedded
+@AttributeOverrides({
+	@AttributeOverride(name = "state", column = @Column(name = "Home_State"))
+	@AttributeOverride(name = "city", column = @Column(name = "Home_City"))
+	@AttributeOverride(name = "pincode", column = @Column(name = "Home_Pincode"))
+})
+private Address homeAddr;
+
+
+@ElementCollection
+@JoinTable(name = "emp_addr", joinColumns = @JoinColumn(name = "emp_id"))
+private List<Address> addresses = new ArrayList<>();
+
+<property name = "hibernate.show_sql" value = "true"/>
+<property name = "hiberbate.hbm2ddl" value = "update"/>
+
+@Table(name = "mystudent")
+
+@Column(name = "sname")
+@Transient
+
+@ElementCollection(fetch = FetchType.EAGER)
+
+department ---> Corresponding Entity Class Department
+
+  PK Col
++-------+----------+--------+-------------+
+| empId | name     | salary | dept_deptId |
++-------+----------+--------+-------------+
+|     4 | Indrajit |  75000 |           3 |
+|     5 | Indrani  |  85000 |           3 |
++-------+----------+--------+-------------+
+
+employee ---> Corresponding Entity Class Employee
+
+						FK Col
++-------+----------+--------+-------------+
+| empId | name     | salary | dept_deptId |
++-------+----------+--------+-------------+
+|     4 | Indrajit |  75000 |           3 |
+|     5 | Indrani  |  85000 |           3 |
+|     7 | Asmita   |  95000 |           6 |
+|     8 | Arpita   |  65000 |           6 |
++-------+----------+--------+-------------+
+
+
+
+
+
+
+
+
+
+
+
