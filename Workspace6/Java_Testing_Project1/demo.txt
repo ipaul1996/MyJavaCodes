@@ -1,1 +1,0 @@
-Hello World! This is an example file." in the "example.txt" file, and the program would be able to read and display this text on the console.
